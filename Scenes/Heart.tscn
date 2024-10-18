@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d13fkeknsucbj"]
+
+[ext_resource type="Texture2D" uid="uid://n1e3dkwu8uv8" path="res://Assets/Sprites/Hearts/background.png" id="1_3i6ka"]
+[ext_resource type="Script" path="res://Scripts/heart.gd" id="1_y2i8y"]
+[ext_resource type="Texture2D" uid="uid://b3xhcgpu4n4ij" path="res://Assets/Sprites/Hearts/heart.png" id="2_jv8qi"]
+[ext_resource type="Texture2D" uid="uid://dxdgxjo4d1m1j" path="res://Assets/Sprites/Hearts/border.png" id="4_p3oty"]
+
+[node name="Control" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 6
+size_flags_vertical = 4
+script = ExtResource("1_y2i8y")
+
+[node name="Bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_3i6ka")
+
+[node name="FullSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_jv8qi")
+
+[node name="EmptySprite" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_p3oty")

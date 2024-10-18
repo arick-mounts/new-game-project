@@ -216,7 +216,7 @@ animations = [{
 radius = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgs5j"]
-size = Vector2(32, 20)
+size = Vector2(16, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r38bu"]
 animations = [{
@@ -438,13 +438,12 @@ shape = SubResource("CircleShape2D_0jyl1")
 
 [node name="HitRotate" type="Area2D" parent="."]
 position = Vector2(0, 1.77636e-14)
-rotation = 1.5708
 scale = Vector2(0.992156, 1)
 collision_layer = 0
 collision_mask = 2
 
 [node name="HitBox" type="CollisionShape2D" parent="HitRotate"]
-position = Vector2(1.32171e-06, 30)
+position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_sgs5j")
 disabled = true
 

@@ -7,7 +7,7 @@ script = ExtResource("1_iob3b")
 rect = Rect2(0, 0, 100, 100)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 6.0
 one_shot = true
 
 [connection signal="draw" from="." to="." method="_on_draw"]
