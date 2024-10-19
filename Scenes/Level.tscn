@@ -964,33 +964,3 @@ offset_top = 291.0
 offset_right = 575.0
 offset_bottom = 331.0
 script = ExtResource("10_st14o")
-
-[node name="Label" type="Label" parent="Control/YouDied"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-tooltip_text = "Ya really done it this time"
-mouse_filter = 1
-mouse_default_cursor_shape = 2
-text = "YOU DIED"
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="Control/YouDied"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 38.0
-offset_right = 64.0
-offset_bottom = 69.0
-text = "Restart"
-
-[node name="Button2" type="Button" parent="Control/YouDied"]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 38.0
-offset_right = 202.0
-offset_bottom = 69.0
-text = "Return to Menu
-"
-
-[connection signal="pressed" from="Control/YouDied/Button" to="Control/YouDied" method="_on_button_pressed"]
-[connection signal="pressed" from="Control/YouDied/Button2" to="Control/YouDied" method="_on_button_2_pressed"]
