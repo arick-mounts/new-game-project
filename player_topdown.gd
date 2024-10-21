@@ -6,7 +6,7 @@ var speed = 150  # speed in pixels/sec
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var hit_rotate: Area2D = $HitRotate
 
-
+var local_collision_pos : Vector2
 
 	
 	
@@ -38,4 +38,8 @@ func _physics_process(delta):
 func _on_hit_rotate_body_entered(body: Node2D) -> void:
 	if(body.is_in_group("hurt_box")):
 		body.take_damage()
+	if(body.is_in_group("mineable")):
+		var lookDirection :Vector2 = global_position.direction_to(get_global_mouse_position())
+		var collision_position: Vector2 =(lookDirection * 2 * 16)  + get_position()
+		body.destroy_cells(collision_position, lookDirection, 3)
  # Replace with function body.
