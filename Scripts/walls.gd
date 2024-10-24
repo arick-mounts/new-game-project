@@ -2,7 +2,7 @@ extends TileMapLayer
 
 
 func destroy_cells(global_position:Vector2, direction: Vector2, neighbors:int = 1):
-	var tile : Vector2 = local_to_map(global_position)/2
+	var tile : Vector2 = local_to_map(global_position)
 	var targets: Array[Vector2i] = get_surrounding_cells(tile)
 	print(tile)
 	for i in neighbors:
@@ -17,5 +17,4 @@ func destroy_cells(global_position:Vector2, direction: Vector2, neighbors:int = 
 func _input(event) -> void:
 	if event.is_action_pressed("Alt Click"):
 		var tile : Vector2 = local_to_map(get_global_mouse_position())
-		print("CLICK TILE", tile)
 		erase_cell(tile)

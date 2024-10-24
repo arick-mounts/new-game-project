@@ -1,13 +1,13 @@
 [gd_scene load_steps=2 format=3 uid="uid://1q067ulqb8gf"]
 
-[ext_resource type="Script" path="res://Scripts/spawner_debug_2.gd" id="1_iob3b"]
+[ext_resource type="Script" path="res://Scripts/enemy_spawner.gd" id="1_x8vl2"]
 
 [node name="EnemySpawner" type="Node2D"]
-script = ExtResource("1_iob3b")
+script = ExtResource("1_x8vl2")
 rect = Rect2(0, 0, 100, 100)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 6.0
 one_shot = true
 
 [connection signal="draw" from="." to="." method="_on_draw"]
